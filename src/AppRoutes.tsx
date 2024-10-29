@@ -5,6 +5,7 @@ import AuthCallbackPage from "./pages/AuthCallbackPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import ProtectedRoute from "./auth/ProtectedRoute";
 import SearchPage from "./pages/SearchPage";
+import DetailPage from "./pages/DetailPage";
 import ManageRestaurantPage from "./pages/ManageRestaurantPage";
 
 const AppRoutes = ()=>{
@@ -17,6 +18,14 @@ const AppRoutes = ()=>{
                 element={
                 <Layout showHero={false}>
                     <SearchPage />
+                </Layout>
+                }
+            />
+             <Route
+                path="/detail/:restaurantId"
+                element={
+                <Layout showHero={false}>
+                    <DetailPage />
                 </Layout>
                 }
             />
