@@ -98,7 +98,13 @@ const DetailPage = () => {
         country: userFormData.country,
         email: userFormData.email as string,
       },
+      totalAmount: cartItems.reduce(
+        (total, cartItem) => total + cartItem.price * cartItem.quantity,
+        0
+      ) + (restaurant.deliveryPrice || 0),
     };
+    
+    
 
     const data = await createCheckoutSession(checkoutData);
     window.location.href = data.url;
