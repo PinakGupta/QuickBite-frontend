@@ -12,12 +12,12 @@ import OrderStatusPage from "./pages/OrderStatusPage";
 const AppRoutes = ()=>{
     return (
         <Routes>
-            <Route path = "/" element ={<Layout showHero><HomePage/></Layout>}/>
+            <Route path = "/" element ={<Layout><HomePage/></Layout>}/>
             <Route path="/auth-callback" element={<AuthCallbackPage />} />
             <Route
                 path="/search/:city"
                 element={
-                <Layout showHero={false}>
+                <Layout>
                     <SearchPage />
                 </Layout>
                 }
@@ -25,7 +25,7 @@ const AppRoutes = ()=>{
              <Route
                 path="/detail/:restaurantId"
                 element={
-                <Layout showHero={false}>
+                <Layout>
                     <DetailPage />
                 </Layout>
                 }
